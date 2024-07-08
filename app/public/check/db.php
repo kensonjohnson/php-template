@@ -1,7 +1,7 @@
 <?php
-$pdo = new PDO('mysql:dbname=testing;host=mysql', 'user', 'secret', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+include '../../connect/db.php';
 
-$query = $pdo->query('SHOW VARIABLES like "version"');
+$query = $conn->query('SHOW VARIABLES like "version"');
 
 $row = $query->fetch();
 
