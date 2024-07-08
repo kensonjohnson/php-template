@@ -20,3 +20,18 @@ docker-compose up
 ```
 
 The server will be available at `http://localhost:8000/`
+
+### Database
+
+The template includes a MySQL database.
+The database is available at `localhost:3306` with the following credentials:
+
+- Username: `user`
+- Password: `secret`
+- Database: `testing`
+
+An easy way to connect is via the command line:
+
+```bash
+mysql --host=localhost --port=3306 --user=user --password=secret testing --protocol tcp
+```
